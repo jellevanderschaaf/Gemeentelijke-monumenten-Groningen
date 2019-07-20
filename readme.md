@@ -1,4 +1,3 @@
-
 User Stories:
 
 - Als gebruiker wil ik toegang hebben tot een geïntegreerde versie van Google Maps die zich beperkt tot de gemeente Groningen. 
