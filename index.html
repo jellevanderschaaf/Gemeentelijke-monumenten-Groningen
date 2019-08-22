@@ -16,7 +16,7 @@
     <div class="flexContainer">
         <div id="infoField"></div>
 
-        <div id="googleMap"></div>
+        <div id="bingMap"></div>
 
     </div>
 
@@ -27,7 +27,7 @@
         function loadjs() {
             var script = document.createElement("script");
             script.type = "text/javascript";
-            script.src = "https://maps.googleapis.com/maps/api/js?key=" + config.key + "&callback=myMap";
+            script.src = "https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=" + config.key + "";
             document.body.appendChild(script);
         }
 
