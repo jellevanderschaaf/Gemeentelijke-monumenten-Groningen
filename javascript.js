@@ -75,3 +75,14 @@ function GetMap() {
     map.entities.push(polygon);
 
 }
+
+
+
+// Ajax // 
+
+var getMonumentData = new XMLHttpRequest();
+getMonumentData.open('GET', 'https://ckan.dataplatform.nl/dataset/7c5c81f1-8efa-4ed4-8483-15181b261b39/resource/98a3ba8d-b3b8-4602-bfe2-e987caad734f/download/gem_groningen_gemeentelijke_monumenten.json');
+getMonumentData.onload = function() {
+    console.log(getMonumentData.responseText);
+};
+getMonumentData.send();
