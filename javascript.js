@@ -1,14 +1,5 @@
 let map;
 
-function GetMap() {
-    map = new Microsoft.Maps.Map('#bingMap', {
-        center: new Microsoft.Maps.Location(53.21917, 6.56667),
-        mapTypeId: Microsoft.Maps.MapTypeId.load,
-        zoom: 13,
-        customMapStyle: myStyle
-    });
-}
-
 //+ Map Color Style
 const myStyle = {
     "version": "1.0",
@@ -41,3 +32,46 @@ const myStyle = {
 
     }
 };
+
+
+
+
+function GetMap() {
+    map = new Microsoft.Maps.Map('#bingMap', {
+        center: new Microsoft.Maps.Location(53.21917, 6.56667),
+        mapTypeId: Microsoft.Maps.MapTypeId.load,
+        zoom: 13,
+        customMapStyle: myStyle
+    });
+
+    var center = map.getCenter();
+
+    //Create array of locations to form a ring.
+    var exteriorRing = [
+
+        new Microsoft.Maps.Location(53.2143976144322, 6.567017548907246),
+        new Microsoft.Maps.Location(53.214515425380405, 6.566944518487769),
+        new Microsoft.Maps.Location(53.214499929155735, 6.566886398731741),
+        new Microsoft.Maps.Location(53.21449976813698, 6.566886506617812),
+        new Microsoft.Maps.Location(53.21449863056725, 6.566882291280076),
+        new Microsoft.Maps.Location(53.214396034096794, 6.566952533317292),
+        new Microsoft.Maps.Location(53.21439644958186, 6.566954146511089),
+        new Microsoft.Maps.Location(53.214396930725734, 6.566956027973599),
+        new Microsoft.Maps.Location(53.214371531669464, 6.566973197784018),
+        new Microsoft.Maps.Location(53.214383187529094, 6.567026152526608),
+        new Microsoft.Maps.Location(53.2143976144322, 6.567017548907246)
+
+    ];
+
+
+    //Create a polygon
+    var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
+        fillColor: 'rgba(0, 255, 0, 0.5)',
+        strokeColor: 'red',
+        strokeThickness: 2
+    });
+
+    //Add the polygon to map
+    map.entities.push(polygon);
+
+}
