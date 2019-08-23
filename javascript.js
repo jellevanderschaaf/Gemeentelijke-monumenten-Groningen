@@ -84,12 +84,22 @@ var getMonumentData = new XMLHttpRequest();
 getMonumentData.open('GET', 'https://ckan.dataplatform.nl/dataset/7c5c81f1-8efa-4ed4-8483-15181b261b39/resource/98a3ba8d-b3b8-4602-bfe2-e987caad734f/download/gem_groningen_gemeentelijke_monumenten.json');
 getMonumentData.onload = function() {
     var data = JSON.parse(getMonumentData.responseText);
-    console.log(data.features[0].geometry.coordinates);
-    var coords = data.features[0].geometry.coordinates[0][0];
-    var firstCoord = coords.shift();
-    var secondCoord = coords.pop();
-    var swappedCoords = [secondCoord, firstCoord];
 
-    document.getElementById("infoField").innerHTML = swappedCoords;
+
+    var coords = data.features[0].geometry.coordinates[0];
+
+    coords.forEach(swapCoordinates);
+
+    function swapCoordinates(item) {
+
+        var coordinateOne = item.shift();
+        item.push(coordinateOne);
+        console.log(coords);
+
+    };
+
+    document.getElementById("infoFieldTwo").innerHTML = coords;
+
+
 };
 getMonumentData.send();
