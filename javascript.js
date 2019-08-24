@@ -86,20 +86,24 @@ getMonumentData.onload = function() {
     var data = JSON.parse(getMonumentData.responseText);
 
 
-    var coords = data.features[0].geometry.coordinates[0];
+    var coords = data.features;
 
-    coords.forEach(swapCoordinates);
+    coords.forEach(swapCoordinatesOne);
 
-    function swapCoordinates(item) {
+    function swapCoordinatesOne(item) {
 
-        var coordinateOne = item.shift();
-        item.push(coordinateOne);
-        console.log(coords);
+        item.geometry.coordinates[0].forEach(swapCoordinatesTwo);
 
+        function swapCoordinatesTwo(item) {
+
+            var coordinateOne = item.shift();
+            item.push(coordinateOne);
+
+        };
     };
 
-    document.getElementById("infoFieldTwo").innerHTML = coords;
 
+    console.log(data.features[1].geometry.coordinates[0]);
 
 };
 getMonumentData.send();
