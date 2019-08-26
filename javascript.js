@@ -54,17 +54,16 @@ function getMap() {
 
 
     //Create array of locations to form a ring.
-    var exteriorRing = [
+    var exteriorRing = [];
 
-    ];
     console.log(exteriorRing);
     testCoords.forEach(drawPolygonThree);
 
     function drawPolygonThree(item) {
 
-        var geoData = new Microsoft.Maps.Location(item);
-        console.log(geoData);
-        exteriorRing.push(geoData);
+        exteriorRing.push(({ latitude: item[0], longitude: item[1], altitude: 0, altitudeReference: -1 }));
+
+        //new Microsoft.Maps.Location(item[0],item[1]); werkt ook //
 
     };
     //Create a polygon
@@ -76,7 +75,6 @@ function getMap() {
 
     //Add the polygon to map
     map.entities.push(polygon);
-
 
 };
 
