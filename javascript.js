@@ -53,31 +53,48 @@ function getMap() {
     });
 
 
-    //Create array of locations to form a ring.
-    var exteriorRing = [];
+    data.features.forEach(drawPolygonOne);
 
-    console.log(exteriorRing);
-    testCoords.forEach(drawPolygonThree);
+    function drawPolygonOne(item) {
 
-    function drawPolygonThree(item) {
+        exteriorRing = [];
 
-        exteriorRing.push(({ latitude: item[0], longitude: item[1], altitude: 0, altitudeReference: -1 }));
+        if (item.geometry.type == "Polygon") {
 
-        //new Microsoft.Maps.Location(item[0],item[1]); werkt ook //
+            item.geometry.coordinates.forEach(drawPolygonTwo);
 
+            function drawPolygonTwo(item) {
+
+                item.forEach(drawPolygonThree);
+
+
+                function drawPolygonThree(item) {
+                    //Create array of locations to form a ring.
+
+
+
+                    exteriorRing.push(({ latitude: item[0], longitude: item[1], altitude: 0, altitudeReference: -1 }));
+
+                    //new Microsoft.Maps.Location(item[0],item[1]); werkt ook //
+
+
+                    //Create a polygon
+                    var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
+                        fillColor: 'rgba(0, 255, 0, 0.5)',
+                        strokeColor: 'red',
+                        strokeThickness: 2
+                    });
+
+
+                    //Add the polygon to map
+                    map.entities.push(polygon);
+
+
+                };
+            };
+        };
     };
-    //Create a polygon
-    var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
-        fillColor: 'rgba(0, 255, 0, 0.5)',
-        strokeColor: 'red',
-        strokeThickness: 2
-    });
-
-    //Add the polygon to map
-    map.entities.push(polygon);
-
 };
-
 
 
 //+ Map Color Style
