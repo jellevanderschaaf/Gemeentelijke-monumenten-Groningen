@@ -85,7 +85,7 @@ function getMap() {
             map.entities.push(polygon);
             Microsoft.Maps.Events.addHandler(polygon, 'click', function() {
 
-                alert(item.properties.OBJECTID);
+                document.getElementById('infoField').innerHTML = item.properties.SAMENVATTING;
 
             });
 
