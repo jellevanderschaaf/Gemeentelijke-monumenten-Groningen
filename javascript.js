@@ -3,6 +3,7 @@
 function swappedCoordinates() {
     var coords = data.features;
     testCoords = data.features[0].geometry.coordinates[0];
+    console.log(data.features);
 
 
     coords.forEach(swapCoordinatesOne);
@@ -74,6 +75,7 @@ function getMap() {
             };
             //Create a polygon
             var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
+                id: item.properties.objectid,
                 fillColor: 'rgba(0, 255, 0, 0.5)',
                 strokeColor: 'red',
                 strokeThickness: 2
@@ -81,10 +83,17 @@ function getMap() {
 
             //Add the polygon to map
             map.entities.push(polygon);
+            Microsoft.Maps.Events.addHandler(polygon, 'click', function() {
+
+                alert(item.properties.OBJECTID);
+
+            });
 
         };
     };
 };
+
+
 
 //+ Map Color Style
 const myStyle = {
