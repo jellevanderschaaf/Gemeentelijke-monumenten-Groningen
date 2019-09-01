@@ -20,4 +20,6 @@ h1 {
     height: 500px;
     border-radius: 5px;
     margin: auto;
+    white-space: pre-line;
+    white-space: pre-wrap;
 }
