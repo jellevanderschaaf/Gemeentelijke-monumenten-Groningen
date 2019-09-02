@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'octin vintage b rg';
+    src: URL('octin vintage b rg.ttf') format('truetype');
+}
+
 body {
     background-color: #F5EEDC;
 }
 
 h1 {
     text-align: center;
+    font-family: octin vintage b rg;
+    font-size: 36px;
 }
 
 .header {
