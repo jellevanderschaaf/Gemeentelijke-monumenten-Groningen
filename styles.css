@@ -36,17 +36,21 @@ img {
 #bingMap {
     width: 60%;
     height: 80%;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin: auto;
     position: absolute;
     left: 35%;
-    top: 17%;
+    top: 15%;
+    border-top: solid 1px #5f6368;
+    border-right: solid 1px #5f6368;
+    border-bottom: solid 1px #5f6368;
 }
 
 #infoField {
     width: calc(30% - 30px);
     height: calc(80% - 30px);
-    background-color: lightgrey;
+    background-color: #FBF3EC;
     border-radius: 5px;
     white-space: pre-line;
     white-space: pre-wrap;
@@ -54,9 +58,16 @@ img {
     padding: 15px;
     position: absolute;
     left: 5%;
-    top: 17%;
+    top: 15%;
     overflow-x: hidden;
     overflow-y: scroll;
+    color: #5f6368;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .25px;
+    line-height: 25px;
+    text-align: left;
+    border: solid 1px #5f6368;
 }
 
 
@@ -67,16 +78,16 @@ img {
 }
 
  ::-webkit-scrollbar-track {
-    background: lightgrey;
+    background: #FBF3EC;
 }
 
  ::-webkit-scrollbar-thumb {
-    background: darkgrey;
+    background: rgba(163, 176, 144, 0.75);
     border-radius: 5px;
 }
 
  ::-webkit-scrollbar-thumb:hover {
-    background: darkgrey;
+    background: rgba(163, 176, 144, 0.75);
 }
 
 
