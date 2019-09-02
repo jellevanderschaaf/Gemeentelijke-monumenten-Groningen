@@ -19,7 +19,7 @@ h1 {
 }
 
 #infoField {
-    width: calc(25% - 30px);
+    width: calc(30% - 30px);
     height: calc(80% - 30px);
     background-color: lightgrey;
     border-radius: 5px;
@@ -43,8 +43,6 @@ h1 {
 
  ::-webkit-scrollbar-track {
     background: lightgrey;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
  ::-webkit-scrollbar-thumb {
