@@ -1,5 +1,23 @@
+body {
+    background-color: #F5EEDC;
+}
+
 h1 {
     text-align: center;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+    background-color: #F5EEDC;
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    left: 2%;
 }
 
 .flexContainer {
@@ -15,7 +33,7 @@ h1 {
     margin: auto;
     position: absolute;
     left: 35%;
-    top: 15%;
+    top: 17%;
 }
 
 #infoField {
@@ -29,7 +47,7 @@ h1 {
     padding: 15px;
     position: absolute;
     left: 5%;
-    top: 15%;
+    top: 17%;
     overflow-x: hidden;
     overflow-y: scroll;
 }

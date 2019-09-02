@@ -76,8 +76,8 @@ function getMap() {
             //Create a polygon
             var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
                 id: item.properties.objectid,
-                fillColor: 'rgba(0, 255, 0, 0.5)',
-                strokeColor: 'red',
+                fillColor: 'rgba(163, 176, 144, 0.5)',
+                strokeColor: 'rgba(163, 176, 144)',
                 strokeThickness: 2
             });
 
