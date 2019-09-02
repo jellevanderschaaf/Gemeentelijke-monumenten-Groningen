@@ -49,7 +49,8 @@ function getMap() {
         center: new Microsoft.Maps.Location(53.21917, 6.56667),
         mapTypeId: Microsoft.Maps.MapTypeId.load,
         zoom: 13,
-        customMapStyle: myStyle
+        customMapStyle: myStyle,
+        showScalebar: false
 
     });
 
