@@ -5,21 +5,56 @@ h1 {
 .flexContainer {
     display: flex;
     width: 100%;
+    justify-content: space-around;
 }
 
 #bingMap {
-    width: 500px;
-    height: 500px;
+    width: 60%;
+    height: 80%;
     border-radius: 5px;
     margin: auto;
+    position: absolute;
+    left: 35%;
+    top: 15%;
 }
 
 #infoField {
+    width: calc(25% - 30px);
+    height: calc(80% - 30px);
     background-color: lightgrey;
-    width: 500px;
-    height: 500px;
     border-radius: 5px;
-    margin: auto;
     white-space: pre-line;
     white-space: pre-wrap;
+    overflow: scroll;
+    padding: 15px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+
+/* scrollbar */
+
+ ::-webkit-scrollbar {
+    width: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: lightgrey;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: darkgrey;
+    border-radius: 5px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: darkgrey;
+}
+
+
+/* scrollbar */
