@@ -24,34 +24,61 @@ h1 {
 
 img {
     position: absolute;
-    left: 2%;
+    left: 5%;
 }
 
-.flexContainer {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.borderOne {
+    border: solid 1px lightgrey;
+    width: calc(90% + 4px);
+    height: calc(75% + 4px);
+    position: absolute;
+    left: calc(5% - 2px);
+    top: calc(15% - 2px);
+}
+
+.borderTwo {
+    border: solid 1px lightgrey;
+    width: calc(90% + 54px);
+    height: calc(75% + 54px);
+    position: absolute;
+    left: calc(5% - 27px);
+    top: calc(15% - 27px);
+}
+
+.borderThree {
+    border: solid 3px #5f6368;
+    width: calc(90% + 60px);
+    height: calc(75% + 60px);
+    position: absolute;
+    left: calc(5% - 32px);
+    top: calc(15% - 32px);
+}
+
+.borderFour {
+    border: solid 1px lightgrey;
+    width: calc(90% + 70px);
+    height: calc(75% + 70px);
+    position: absolute;
+    left: calc(5% - 35px);
+    top: calc(15% - 35px);
 }
 
 #bingMap {
     width: 60%;
-    height: 80%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    height: 75%;
     margin: auto;
     position: absolute;
-    left: 35%;
+    left: calc(35% + 1px);
     top: 15%;
-    border-top: solid 1px #5f6368;
-    border-right: solid 1px #5f6368;
-    border-bottom: solid 1px #5f6368;
+    border-top: solid 1px lightgrey;
+    border-right: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
 }
 
 #infoField {
     width: calc(30% - 30px);
-    height: calc(80% - 30px);
+    height: calc(75% - 30px);
     background-color: #FBF3EC;
-    border-radius: 5px;
     white-space: pre-line;
     white-space: pre-wrap;
     overflow: scroll;
@@ -67,7 +94,9 @@ img {
     letter-spacing: .25px;
     line-height: 25px;
     text-align: left;
-    border: solid 1px #5f6368;
+    border: solid 1px lightgrey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 
