@@ -138,3 +138,11 @@ img {
 #ZoomInButton {
     margin-top: 25px;
 }
+
+.bm_bottomLeftOverlay {
+    visibility: hidden;
+}
+
+.bm_bottomRightOverlay {
+    visibility: hidden;
+}
