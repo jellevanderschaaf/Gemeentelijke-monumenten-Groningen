@@ -76,7 +76,7 @@ function getMap() {
             };
             //Create a polygon
             var polygon = new Microsoft.Maps.Polygon(exteriorRing, {
-                id: item.properties.objectid,
+
                 fillColor: 'rgba(163, 176, 144, 0.5)',
                 strokeColor: 'rgba(163, 176, 144)',
                 strokeThickness: 2
@@ -86,8 +86,23 @@ function getMap() {
             map.entities.push(polygon);
             Microsoft.Maps.Events.addHandler(polygon, 'click', function() {
 
+                if (storedPolygon !== '') {
+
+                    storedPolygon.setOptions({
+                        strokeColor: 'rgba(163, 176, 144)',
+                        fillColor: 'rgba(163, 176, 144, 0.5)'
+                    });
+                };
+
                 document.getElementById('summary').innerHTML = item.properties.SAMENVATTING;
                 document.getElementById('objectName').innerHTML = item.properties.MON_OBJECTNAAM;
+
+                polygon.setOptions({
+                    strokeColor: '#14DB4D',
+                    fillColor: 'rgb(20, 219, 77, 0.5)'
+                });
+
+                storedPolygon = polygon;
 
             });
 
@@ -95,7 +110,8 @@ function getMap() {
     };
 };
 
-
+var storedPolygon = '';
+console.log(storedPolygon);
 
 //+ Map Color Style
 const myStyle = {
