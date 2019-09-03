@@ -17,7 +17,7 @@ h1 {
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 100px;
+    height: 140px;
     background-color: #F5EEDC;
     align-items: center;
 }
@@ -27,45 +27,9 @@ img {
     left: 5%;
 }
 
-.borderOne {
-    border: solid 1px lightgrey;
-    width: calc(90% + 4px);
-    height: calc(75% + 4px);
-    position: absolute;
-    left: calc(5% - 2px);
-    top: calc(15% - 2px);
-}
-
-.borderTwo {
-    border: solid 1px lightgrey;
-    width: calc(90% + 54px);
-    height: calc(75% + 54px);
-    position: absolute;
-    left: calc(5% - 27px);
-    top: calc(15% - 27px);
-}
-
-.borderThree {
-    border: solid 3px #5f6368;
-    width: calc(90% + 60px);
-    height: calc(75% + 60px);
-    position: absolute;
-    left: calc(5% - 32px);
-    top: calc(15% - 32px);
-}
-
-.borderFour {
-    border: solid 1px lightgrey;
-    width: calc(90% + 70px);
-    height: calc(75% + 70px);
-    position: absolute;
-    left: calc(5% - 35px);
-    top: calc(15% - 35px);
-}
-
 #bingMap {
     width: 60%;
-    height: 75%;
+    height: 77%;
     margin: auto;
     position: absolute;
     left: calc(35% + 1px);
@@ -79,8 +43,8 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: calc(30%);
-    height: calc(75%);
+    width: 30%;
+    height: 77%;
     background-color: #FBF3EC;
     position: absolute;
     left: 5%;
