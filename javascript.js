@@ -50,7 +50,8 @@ function getMap() {
         mapTypeId: Microsoft.Maps.MapTypeId.load,
         zoom: 13,
         customMapStyle: myStyle,
-        showScalebar: false
+        showScalebar: false,
+        showLocateMeButton: false
 
     });
 
